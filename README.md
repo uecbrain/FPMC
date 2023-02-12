@@ -28,6 +28,11 @@ The format is:
     [user index] [item index] ... [item index]
 The last one item is regarded as next item (next basket), and is what our FPMC will predict.
 
+## 前処理
+住谷さんのコードで前処理を行う.
+preprocess.pyでフォーマットを合わせる.
+
+python3 run.py 前処理後のデータ
 
 ## Reference
 
