@@ -2,8 +2,9 @@
 import pandas as pd
 
 # すみやさんのコードで作成したsession_idを付与したデータ
-df = pd.read_csv("{INPUT_PATH}/train-item-views.csv")
+df = pd.read_csv("{INPUT_PATH}/20_35.csv")
 
+df["item_id"] = df["genre_1"] + df["genre_2"] + df["genre_3"]
 df[["session_id", "item_id"]] = df[["session_id", "item_id"]].astype(int)
 
 df['session_id'] = df['session_id'].dropna().apply(lambda x: str(int(x)))
